@@ -23,4 +23,6 @@ const SEARCH_INDEX = [
   { title: "Disputing your credit report", url: "credit-bureau-disputes.html#how-to-dispute", keywords: "credit bureau dispute experian equifax transunion", snippet: "How to dispute an error directly with each of the three credit bureaus." },
   { title: "Sample debt validation letter", url: "sample-letters.html#validation-letter", keywords: "sample letter template validation dispute", snippet: "A copyable template for requesting validation of a debt." },
   { title: "Sample cease-communication letter", url: "sample-letters.html#cease-letter", keywords: "cease communication letter stop contact template", snippet: "A copyable template asking a collector to stop contacting you." },
+  { title: "What to write down after every phone call", url: "communication-log.html#phone-calls", keywords: "communication log phone call rep name agent id identifying information record", snippet: "Get the representative's name and a badge or employee ID — different reps may tell you different things." },
+  { title: "What to keep from every letter", url: "communication-log.html#mail", keywords: "communication log mail letter postmark validation notice", snippet: "Keep the envelope — the postmark date is proof of when a deadline started." },
 ];

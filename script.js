@@ -30,3 +30,30 @@
     render(matches);
   });
 })();
+
+// Checklist: remembers checked items per visitor (localStorage), per page.
+// Purely a convenience — if storage is unavailable, checkboxes still work, just don't persist.
+(function () {
+  const boxes = document.querySelectorAll('.checklist input[type="checkbox"]');
+  if (!boxes.length) return;
+
+  function keyFor(box) {
+    return 'checklist:' + location.pathname + ':' + box.id;
+  }
+
+  boxes.forEach(box => {
+    try {
+      if (localStorage.getItem(keyFor(box)) === '1') {
+        box.checked = true;
+        box.closest('li').classList.add('checked');
+      }
+    } catch (e) { /* storage unavailable — ignore */ }
+
+    box.addEventListener('change', () => {
+      box.closest('li').classList.toggle('checked', box.checked);
+      try {
+        localStorage.setItem(keyFor(box), box.checked ? '1' : '0');
+      } catch (e) { /* storage unavailable — ignore */ }
+    });
+  });
+})();
