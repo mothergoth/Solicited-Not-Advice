@@ -27,51 +27,61 @@
   </div>
 </header>
 
-<div class="site-search">
-  <label for="site-search-input" class="visually-hidden">Search this site</label>
-  <input type="search" id="site-search-input" placeholder="Search — e.g. &quot;medical debt&quot;, &quot;harassment&quot;, &quot;statute of limitations&quot;" autocomplete="off">
-  <div id="search-results"></div>
-</div>
-
 <section class="hero">
   <div class="hero-inner">
     <h1>If you're here, a debt collector has probably contacted you — and you're trying to figure out what to do.</h1>
     <p class="lede">Welcome. I've been through this too — including a collector who told me federal law required me to pay a debt that Texas law says they couldn't legally collect. This site is what I put together along the way: how to recognize bad-faith tactics, what the law actually says, and concrete next steps.</p>
     <p class="signoff">— built by someone who's been on the other end of that phone call</p>
+
+    <div class="hero-search">
+      <label for="site-search-input" class="visible-label">Search this site</label>
+      <input type="search" id="site-search-input" placeholder="Try &quot;harassment&quot;, &quot;medical debt&quot;, or &quot;statute of limitations&quot;" autocomplete="off">
+      <div id="search-results"></div>
+    </div>
   </div>
 </section>
 
 <main id="main">
 
-  <div class="disclaimer">
-    <strong>This is not legal advice.</strong> This is a free, community-built guide meant to help you understand your rights and figure out what to do next — not a substitute for a licensed attorney. Laws change, and every situation is different. If you're facing a lawsuit, wage garnishment, or a large or complicated debt, please talk to a licensed attorney or a free legal aid organization in your state. Using this site does not create an attorney-client relationship with anyone.
+  <div class="urgent-alert">
+    <span class="urgent-label">If this is urgent</span>
+    <p><strong>Already been sued, served papers, or facing wage garnishment?</strong> Stop reading guides and talk to a licensed attorney or free legal aid organization today — most have emergency intake for active lawsuits. This site can help you prepare questions, but it can't represent you in court.</p>
   </div>
 
-  <h2>Where to start</h2>
-  <p>Most people land here in one of a few situations. Pick the one closest to yours:</p>
+  <div class="disclaimer">
+    <strong>This is not legal advice.</strong> This is a free, community-built guide meant to help you understand your rights and figure out what to do next — not a substitute for a licensed attorney. Laws change, and every situation is different. Using this site does not create an attorney-client relationship with anyone.
+  </div>
+
+  <p class="triage-prompt">Most people land here in one of a few situations. Pick the one closest to yours:</p>
 
   <div class="card-grid">
     <a class="card" href="recognize-the-tactic.html">
+      <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="24" cy="24" r="19"/><path d="M24 14v12"/><circle cx="24" cy="32" r="1.6" fill="currentColor" stroke="none"/></svg></span>
       <h3>Something feels off about how they're treating you</h3>
       <p>Learn the specific tactics that are actually illegal — threats, harassment, lying about what you owe — and what law each one breaks.</p>
     </a>
     <a class="card" href="playbook.html">
+      <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 8h18l6 6v26H12z"/><path d="M30 8v6h6"/><path d="M17 22h14M17 28h14M17 34h8"/></svg></span>
       <h3>You want to know your rights, generally</h3>
       <p>The core federal rights everyone has, regardless of state: validation requests, record-keeping, and how to escalate.</p>
     </a>
     <a class="card" href="medical-debt.html">
+      <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 10v28M10 24h28"/><rect x="8" y="8" width="32" height="32" rx="4"/></svg></span>
       <h3>It's a medical bill</h3>
       <p>Medical debt has its own patterns and its own protections — including one Texas rule almost nobody knows about.</p>
     </a>
     <a class="card" href="credit-card-debt.html">
+      <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="12" width="36" height="24" rx="3"/><path d="M6 20h36"/><path d="M12 29h10"/></svg></span>
       <h3>It's a credit card, car loan, utility bill, or student loan</h3>
       <p>Each debt type has its own common bad-faith patterns and the strongest evidence to gather for each.</p>
     </a>
     <a class="card" href="texas.html">
+      <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M24 6l16 8v6c0 12-7 19-16 22-9-3-16-10-16-22v-6z"/><path d="M18 24l5 5 9-11"/></svg></span>
       <h3>You're in Texas</h3>
       <p>Texas has its own debt collection law, on top of federal protections — including a stronger statute of limitations rule than many states.</p>
     </a>
     <a class="card" href="sample-letters.html">
+      <span class="card-icon" aria-hidden="true"><svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="10" width="32" height="28" rx="2"/><path d="M8 12l16 13 16-13"/></svg></span>
       <h3>You just need a letter to send</h3>
       <p>Copyable templates for validation requests and cease-communication letters, with notes on what law each one invokes.</p>
     </a>

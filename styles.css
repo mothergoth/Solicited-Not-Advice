@@ -163,6 +163,46 @@ main.wide { max-width: 900px; }
   margin-top: 0.6em;
 }
 
+/* ===== Hero search (homepage) ===== */
+.hero-search {
+  margin-top: 1.6em;
+  max-width: 560px;
+}
+.hero-search label.visible-label {
+  display: block;
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--ink-light);
+  margin-bottom: 0.5em;
+}
+.hero-search input {
+  width: 100%;
+  padding: 0.9em 1.1em;
+  border: 2px solid var(--ink);
+  border-radius: var(--radius);
+  font-size: 1.1rem;
+  font-family: var(--sans);
+  background: white;
+}
+.hero-search input:focus-visible {
+  outline: 3px solid var(--verified);
+  outline-offset: 1px;
+}
+.hero-search #search-results {
+  padding: 0;
+  margin-top: 0.5em;
+}
+.triage-prompt {
+  font-family: var(--serif);
+  font-size: 1.1rem;
+  color: var(--ink);
+  font-weight: 600;
+  margin: 1.8em 0 0.6em;
+}
+
 /* ===== Disclaimer box ===== */
 .disclaimer {
   background: var(--caution-bg);
@@ -192,6 +232,70 @@ main.wide { max-width: 900px; }
 .citation p { margin: 0.4em 0; }
 .citation .cite-link { font-size: 0.9rem; }
 
+/* ===== Progressive disclosure within citations ===== */
+.citation .takeaway {
+  margin: 0.4em 0;
+}
+.citation details {
+  margin: 0.6em 0 0.2em;
+  border-top: 1px dashed var(--border);
+  padding-top: 0.6em;
+}
+.citation details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--ink-light);
+  font-size: 0.92rem;
+  list-style: none;
+  user-select: none;
+}
+.citation details summary::-webkit-details-marker { display: none; }
+.citation details summary::before {
+  content: "▸ ";
+  color: var(--verified);
+}
+.citation details[open] summary::before {
+  content: "▾ ";
+}
+.citation details summary:hover { color: var(--verified); }
+.citation details[open] summary {
+  margin-bottom: 0.5em;
+}
+.citation details .legal-text {
+  background: var(--paper-warm);
+  border-radius: var(--radius);
+  padding: 0.8em 1em;
+  font-size: 0.93rem;
+  color: var(--text-muted);
+}
+.citation details .legal-text p { margin: 0.3em 0; }
+
+/* ===== Urgent alert (distinct from .disclaimer) ===== */
+.urgent-alert {
+  background: #FBE9E7;
+  border: 2px solid #B23A2F;
+  border-radius: var(--radius);
+  padding: 1.1em 1.3em;
+  margin: 1.6em 0;
+  font-size: 0.98rem;
+  position: relative;
+}
+.urgent-alert .urgent-label {
+  display: inline-block;
+  font-family: var(--sans);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  font-size: 0.78rem;
+  color: white;
+  background: #B23A2F;
+  padding: 0.25em 0.6em;
+  border-radius: 3px;
+  margin-bottom: 0.5em;
+}
+.urgent-alert strong { color: #8A2A21; }
+.urgent-alert p:last-child { margin-bottom: 0; }
+
 /* ===== Cards / grid ===== */
 .card-grid {
   display: grid;
@@ -209,8 +313,17 @@ main.wide { max-width: 900px; }
   display: block;
 }
 .card:hover { border-color: var(--verified); }
+.card:hover .card-icon { color: var(--verified); }
 .card h3 { margin-top: 0; color: var(--ink); }
 .card p { font-size: 0.92rem; color: var(--text-muted); margin-bottom: 0; }
+.card-icon {
+  width: 34px;
+  height: 34px;
+  color: var(--ink-light);
+  margin-bottom: 0.6em;
+  display: block;
+}
+.card-icon svg { width: 100%; height: 100%; }
 
 /* ===== Tactic pattern block ===== */
 .tactic {
@@ -220,8 +333,15 @@ main.wide { max-width: 900px; }
   margin: 1.4em 0;
   background: white;
 }
-.tactic h3 { margin-top: 0; }
+.tactic h3 { margin-top: 0; display: flex; align-items: center; gap: 0.5em; }
 .tactic .looks-like { color: var(--text-muted); font-style: italic; }
+.tactic-icon {
+  width: 26px;
+  height: 26px;
+  flex-shrink: 0;
+  color: var(--caution);
+}
+.tactic-icon svg { width: 100%; height: 100%; }
 
 /* ===== Steps ===== */
 ol.steps { padding-left: 1.4em; }
@@ -305,6 +425,7 @@ footer.site-footer {
 @media (max-width: 640px) {
   .hero { padding: 2.2em 1em; }
   .hero h1 { font-size: 1.7rem; }
+  .hero-search input { font-size: 1rem; }
   main { padding: 1.8em 1em 4em; }
   nav.main-nav { gap: 0.1em 0.7em; }
 }
