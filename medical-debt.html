@@ -26,6 +26,15 @@
   </div>
 </header>
 
+<div class="site-search">
+  <div class="site-search-inner">
+    <label for="site-search-input" class="visually-hidden">Search this site</label>
+    <input type="search" id="site-search-input" placeholder="Search &mdash; e.g. &quot;medical debt&quot;, &quot;harassment&quot;, &quot;statute of limitations&quot;" autocomplete="off">
+    <div id="search-results"></div>
+  </div>
+</div>
+
+
 <main id="main">
   <div class="eyebrow">Medical debt</div>
   <h1>Medical Debt</h1>
@@ -33,8 +42,10 @@
 
   <h2 id="already-paid">Pattern 1 — Insurance already paid, but the account was never closed</h2>
   <p>Sometimes a bill gets sent to collections even though insurance already covered it — a billing error, not a real debt.</p>
-  <p><strong>Evidence to gather:</strong> your Explanation of Benefits (EOB) showing the insurer's payment, an itemized bill from the provider, and the payment date.</p>
-  <div class="citation">
+  <details class="section-details">
+    <summary>What to do about it &rarr;</summary>
+    <p><strong>Evidence to gather:</strong> your Explanation of Benefits (EOB) showing the insurer's payment, an itemized bill from the provider, and the payment date.</p>
+    <div class="citation">
       <p class="takeaway">Collecting an amount already paid — in full or in part, by insurance or a government payor — violates the FDCPA's prohibition on false representations and unfair collection practices.</p>
       <details>
         <summary>Show me the exact law &rarr;</summary>
@@ -44,10 +55,13 @@
         </div>
       </details>
     </div>
+  </details>
 
   <h2 id="texas-146">Pattern 2 — Insurance denied for late filing (Texas)</h2>
   <p>This is the one almost nobody knows about. If a Texas provider bills your insurer too late, they can lose the right to collect from you entirely — even though you still technically have an unpaid balance.</p>
-  <div class="citation">
+  <details class="section-details">
+    <summary>What to do about it &rarr;</summary>
+    <div class="citation">
       <p class="takeaway">A Texas health care provider must bill the patient — or bill the insurer directly, if that's how they're billing — no later than the first day of the 11th month after the date services were provided (unless an earlier deadline is set by contract).</p>
       <details>
         <summary>Show me the exact law &rarr;</summary>
@@ -57,7 +71,7 @@
         </div>
       </details>
     </div>
-  <div class="citation">
+    <div class="citation">
       <p class="takeaway">A provider who misses that deadline may not recover from the patient any amount the patient would have had covered by insurance had the provider billed on time — and this bar extends to family members who'd otherwise be responsible for the debt.</p>
       <details>
         <summary>Show me the exact law &rarr;</summary>
@@ -67,11 +81,12 @@
         </div>
       </details>
     </div>
-  <ol class="steps">
-    <li>Ask the provider or collector for the date of service and the date the claim was actually filed with your insurer.</li>
-    <li>If the gap is more than 11 months (or your insurer's contractual deadline, if shorter), cite §§146.002–146.003 in a written dispute demanding the account be closed.</li>
-    <li>See <a href="texas.html">the Texas page</a> for how this fits with Texas's other debt collection protections.</li>
-  </ol>
+    <ol class="steps">
+      <li>Ask the provider or collector for the date of service and the date the claim was actually filed with your insurer.</li>
+      <li>If the gap is more than 11 months (or your insurer's contractual deadline, if shorter), cite §§146.002–146.003 in a written dispute demanding the account be closed.</li>
+      <li>See <a href="texas.html">the Texas page</a> for how this fits with Texas's other debt collection protections.</li>
+    </ol>
+  </details>
 
   <h2>What credit reporting protections currently exist</h2>
   <p>The three nationwide credit bureaus (Equifax, Experian, TransUnion) have, since 2022–2023, voluntarily stopped reporting paid medical debt, medical debt under one year old, and medical debt under $500. This is an industry practice they've chosen to follow, not a legal requirement — but it's currently what's protecting most people, since no federal law requires it.</p>
